@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grievance System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Student Grievance System Logo" class="logo"> <!-- Logo added here -->
+        <h1>Student Grievance System</h1>
+
+        <form id="grievance-form">
+            <label for="student-name">Name:</label>
+            <input type="text" id="student-name" name="student-name" required>
+
+            <label for="branch">Branch:</label>
+            <select id="branch" name="branch" required>
+                <option value="">Select Branch</option>
+                <option value="CSE">Computer Science & Engineering</option>
+                <option value="ECE">Electronics & Communication Engineering</option>
+                <option value="ME">Mechanical Engineering</option>
+                <option value="CE">Civil Engineering</option>
+            </select>
+
+            <label for="grievance-type">Grievance Type:</label>
+            <select id="grievance-type" name="grievance-type" required>
+                <option value="">Select Type</option>
+                <option value="Academic">Academic</option>
+                <option value="Administrative">Administrative</option>
+                <option value="Facilities">Facilities</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="grievance-title">Grievance Title:</label>
+            <input type="text" id="grievance-title" name="grievance-title" required>
+
+            <label for="grievance-details">Details:</label>
+            <textarea id="grievance-details" name="grievance-details" rows="4" required></textarea>
+
+            <!-- Hidden field to store user-agent -->
+            <input type="hidden" id="user-agent" name="user-agent">
+
+            <button type="submit">Submit Grievance</button>
+        </form>
+
+        <div id="feedback-message"></div>
+
+        <h2>Submitted Grievances</h2>
+        <ul id="grievance-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
